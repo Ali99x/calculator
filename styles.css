@@ -1,0 +1,272 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #524e0a 0%, #3b3804 50%, #212003 100%);
+    z-index: 0;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.glass-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 22px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+        margin-bottom: 16px; /* المسافة بين الفوتر والمحتوى الذي فوقه */
+            direction: rtl; /* اتجاه النصوص بشكل عام من اليمين لليسار */
+                width: 100%;  
+                height: auto;
+    max-height: 90vh;
+
+
+}
+.glass-container label,
+
+.glass-container p {
+    margin: 1px 0; /* تقليص المسافة بين العناصر الداخلية */
+    padding: 1px; /* تقليص المسافة الداخلية للعناصر */
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+
+h3 {
+    color:#d4d120; /* اللون الأصفر */
+    font-size: 14px; /* حجم الخط أصغر */
+    background: rgba(0, 0, 0, 0.1); /* خلفية خفيفة */
+    padding: 10px; /* إضافة حواف للعنوان */
+    border-radius: 5px; /* زوايا دائرية للخلفية */
+    margin-bottom: 15px; /* مسافة سفلية */
+      margin-top: 0px; /* مسافة سفلية */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8c7119;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ad9f1c;
+}
+
+h2 {
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    color: white;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu button:hover {
+    background-color: #ffc400;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: -100px;
+        opacity: 0;
+    }
+}
+
+/* إشعار */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden; /* تأكد من أن العنصر غير مرئي بشكل افتراضي */
+}
+
+.notification.info {
+    background-color: #4CAF50; /* لون الإشعار الناجح */
+}
+
+.notification.error {
+    background-color: #f44336; /* لون الإشعار الخطأ */
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible; /* اجعل العنصر مرئي عند العرض */
+}
+
+.notification.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    color: white;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.side-menu button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu button:hover {
+    background-color: #ffc400;
+}
+
