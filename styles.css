@@ -7,7 +7,7 @@ body, html {
     align-items: center;
     background: transparent;
     overflow: hidden;
-    direction: rtl;
+  
 }
 
 .background {
@@ -25,6 +25,7 @@ body, html {
 }
 
 .glass-container {
+    
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.1);
@@ -124,6 +125,7 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+     color: #1890db;
 }
 
 .menu-button {
