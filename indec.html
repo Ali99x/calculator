@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة المعدل</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="stars"></div>
+    
+    <div class="glass-container">
+        <h1>احسب معدلك</h1>
+<h3>للصف السادس الوزاري مع الصف الخامس ورابع</h3>
+        <label for="sixth-grade">معدل الصف السادس:</label>
+        <input type="number" id="sixth-grade" placeholder="معدل الصف السادس" min="0" max="100">
+        
+        <label for="fifth-grade">معدل الصف الخامس:</label>
+        <input type="number" id="fifth-grade" placeholder="معدل الصف الخامس" min="0" max="100">
+        
+        <label for="fourth-grade">معدل الصف الرابع:</label>
+        <input type="number" id="fourth-grade" placeholder="معدل الصف الرابع" min="0" max="100">
+        
+        <button onclick="calculateAverage()">احسب المعدل</button>
+        
+        <h2 id="final-average">المعدل النهائي: </h2>
+    </div>
+
+
+
+  <!-- زر القائمة -->
+<div id="menu-button" class="menu-button">&#9776;</div>
+
+<!-- القائمة الجانبية -->
+<div id="side-menu" class="side-menu">
+    <button data-url="https://alievo99.github.io/university/">معدلات الجامعات الحكومية -</button>
+<button data-url="https://alievo99.github.io/private/"> الجامعات الاهلية -</button>
+ <button data-url="https://alievo99.github.io/college/">القسم حسب المعدل -</button>
+</div>
+    
+
+    <footer>
+<p>2024 - © <a href="https://t.me/ali_me09" target="_blank">Ali</a> جميع الحقوق محفوظة للمطور</p>
+
+    </footer>
+
+    <div id="notification" class="notification"></div> <!-- عنصر الإشعار -->
+
+    <script src="script.js"></script>
+</body>
+</html>
