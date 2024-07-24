@@ -70,12 +70,12 @@ function calculateAverage() {
     const fourthGrade = parseFloat(document.getElementById('fourth-grade').value);
 
     if (isNaN(sixthGrade) || isNaN(fifthGrade) || isNaN(fourthGrade)) {
-        showNotification("يرجى إدخال القيم بشكل صحيح.", "error");
+     showNotification(" ادخل معدل بشكل صحيح", "error");
         return;
     }
     
     if (sixthGrade > 100 || fifthGrade > 100 || fourthGrade > 100) {
-        showNotification("يرجى إدخال قيم بين 0 و 100.", "error");
+       showNotification(" ادخل معدل بين 50 و 100", "error");
         return;
     }
 
@@ -83,7 +83,7 @@ function calculateAverage() {
     document.getElementById('final-average').innerText = `المعدل النهائي: ${finalAverage.toFixed(2)}`;
     
     // Show success notification
-    showNotification("تم احتساب المعدل بنجاح.", "info");
+  showNotification("تم احتساب المعدل", "info")
 }
 
 
@@ -121,5 +121,3 @@ const menuButton = document.getElementById('menu-button');
 function openPage(url) {
     window.location.href = url;
 }
-
-
