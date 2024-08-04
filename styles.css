@@ -10,6 +10,11 @@ body, html {
   
 }
 
+* {
+                cursor: url('https://i.ibb.co/RvKR9Q1/pen1.png'), auto; /* استخدم مسار الصورة الصحيح */
+
+}
+
 .background {
     position: absolute;
     width: 100%;
@@ -92,7 +97,6 @@ button {
     background-color: #8c7119;
     color: white;
     font-size: 16px;
-    cursor: pointer;
     margin-top: 20px;
 }
 
@@ -134,7 +138,6 @@ footer a:hover {
     top: 20px;
     right: 20px;
     font-size: 24px;
-    cursor: pointer;
     z-index: 1009;
     color: white;
     transition: transform 0.3s ease;
@@ -241,7 +244,6 @@ footer a:hover {
     top: 20px;
     right: 20px;
     font-size: 24px;
-    cursor: pointer;
     z-index: 1000;
     color: white;
 }
