@@ -178,8 +178,9 @@ footer a:hover {
 }
 
 .side-menu button:hover {
-    background-color: #ffc400;
+    background-color: #6e6e6e;
 }
+
 
 @keyframes slideDown {
     from {
